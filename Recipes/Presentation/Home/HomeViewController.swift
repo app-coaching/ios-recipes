@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
     private func loadRecipes() {
         Task {
             await viewModel.loadRecipes()
-             tableView.reloadData()
+            tableView.reloadData()
         }
     }
 
