@@ -49,6 +49,12 @@
 		66F9B6392C91B7A300F5B3B1 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6382C91B7A300F5B3B1 /* BookmarksViewModel.swift */; };
 		66F9B63B2C91B7CA00F5B3B1 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B63A2C91B7CA00F5B3B1 /* BookmarksViewController.swift */; };
 		66F9B63D2C91BA1500F5B3B1 /* BookmarksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B63C2C91BA1500F5B3B1 /* BookmarksCoordinator.swift */; };
+		66F9B64E2C91C38F00F5B3B1 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B64D2C91C38F00F5B3B1 /* NetworkConfig.swift */; };
+		66F9B6502C91C3BE00F5B3B1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B64F2C91C3BE00F5B3B1 /* Endpoint.swift */; };
+		66F9B6522C91C41100F5B3B1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6512C91C41100F5B3B1 /* NetworkService.swift */; };
+		66F9B6552C91C59A00F5B3B1 /* RecipesNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6542C91C59A00F5B3B1 /* RecipesNetworkConfig.swift */; };
+		66F9B6572C91C5AD00F5B3B1 /* Endpoint+Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6562C91C5AD00F5B3B1 /* Endpoint+Recipes.swift */; };
+		66F9B6592C91C5EE00F5B3B1 /* RecipeNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6582C91C5EE00F5B3B1 /* RecipeNetworkRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +112,12 @@
 		66F9B6382C91B7A300F5B3B1 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
 		66F9B63A2C91B7CA00F5B3B1 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		66F9B63C2C91BA1500F5B3B1 /* BookmarksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCoordinator.swift; sourceTree = "<group>"; };
+		66F9B64D2C91C38F00F5B3B1 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		66F9B64F2C91C3BE00F5B3B1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		66F9B6512C91C41100F5B3B1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		66F9B6542C91C59A00F5B3B1 /* RecipesNetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesNetworkConfig.swift; sourceTree = "<group>"; };
+		66F9B6562C91C5AD00F5B3B1 /* Endpoint+Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Recipes.swift"; sourceTree = "<group>"; };
+		66F9B6582C91C5EE00F5B3B1 /* RecipeNetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,7 @@
 		663F42742C8B0D1F00854CB6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				66F9B6532C91C59000F5B3B1 /* Network */,
 				663F42852C8B0DA300854CB6 /* DataSource */,
 				663F42842C8B0D9A00854CB6 /* Repository */,
 				663F42832C8B0D9600854CB6 /* DTO */,
@@ -239,6 +252,7 @@
 			children = (
 				663F42A22C8B1B6A00854CB6 /* RecipeRepository.swift */,
 				66F9B6322C90AC0C00F5B3B1 /* BookmarkRepository.swift */,
+				66F9B6582C91C5EE00F5B3B1 /* RecipeNetworkRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -255,6 +269,7 @@
 		663F428D2C8B101700854CB6 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				66F9B64C2C91C38200F5B3B1 /* Networking */,
 				663F428E2C8B102100854CB6 /* String+Localized.swift */,
 				663F42992C8B167B00854CB6 /* Coordinator.swift */,
 				663F429B2C8B171400854CB6 /* DependencyContainer.swift */,
@@ -328,6 +343,25 @@
 				66F9B63C2C91BA1500F5B3B1 /* BookmarksCoordinator.swift */,
 			);
 			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		66F9B64C2C91C38200F5B3B1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				66F9B64D2C91C38F00F5B3B1 /* NetworkConfig.swift */,
+				66F9B64F2C91C3BE00F5B3B1 /* Endpoint.swift */,
+				66F9B6512C91C41100F5B3B1 /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		66F9B6532C91C59000F5B3B1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				66F9B6542C91C59A00F5B3B1 /* RecipesNetworkConfig.swift */,
+				66F9B6562C91C5AD00F5B3B1 /* Endpoint+Recipes.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,13 +481,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F9B6552C91C59A00F5B3B1 /* RecipesNetworkConfig.swift in Sources */,
 				66F9B63B2C91B7CA00F5B3B1 /* BookmarksViewController.swift in Sources */,
 				663F428F2C8B102100854CB6 /* String+Localized.swift in Sources */,
 				66F9B6332C90AC0C00F5B3B1 /* BookmarkRepository.swift in Sources */,
 				66F9B6362C91B18C00F5B3B1 /* AppCoordinator.swift in Sources */,
+				66F9B6502C91C3BE00F5B3B1 /* Endpoint.swift in Sources */,
 				663F42962C8B165900854CB6 /* HomeViewModel.swift in Sources */,
 				663F42A52C8B212C00854CB6 /* RecipeCell.swift in Sources */,
+				66F9B6592C91C5EE00F5B3B1 /* RecipeNetworkRepository.swift in Sources */,
 				66F9B62B2C908C9C00F5B3B1 /* IngredientCell.swift in Sources */,
+				66F9B64E2C91C38F00F5B3B1 /* NetworkConfig.swift in Sources */,
 				663F42872C8B0DB800854CB6 /* RecipeDTO.swift in Sources */,
 				663F42A32C8B1B6A00854CB6 /* RecipeRepository.swift in Sources */,
 				663F42942C8B164600854CB6 /* HomeViewController.swift in Sources */,
@@ -473,7 +511,9 @@
 				663F429F2C8B179500854CB6 /* Recipe.swift in Sources */,
 				663F42912C8B103300854CB6 /* LocalRecipeDataSourceError.swift in Sources */,
 				66F9B61B2C90846500F5B3B1 /* IngredientDTO.swift in Sources */,
+				66F9B6522C91C41100F5B3B1 /* NetworkService.swift in Sources */,
 				66F9B6252C90865D00F5B3B1 /* RecipeDetailViewController.swift in Sources */,
+				66F9B6572C91C5AD00F5B3B1 /* Endpoint+Recipes.swift in Sources */,
 				663F42472C8B0CE400854CB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
