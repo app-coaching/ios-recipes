@@ -45,6 +45,10 @@
 		66F9B62B2C908C9C00F5B3B1 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B62A2C908C9C00F5B3B1 /* IngredientCell.swift */; };
 		66F9B6312C90A77D00F5B3B1 /* BookmarkRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6302C90A77D00F5B3B1 /* BookmarkRepositoryTests.swift */; };
 		66F9B6332C90AC0C00F5B3B1 /* BookmarkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6322C90AC0C00F5B3B1 /* BookmarkRepository.swift */; };
+		66F9B6362C91B18C00F5B3B1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6352C91B18C00F5B3B1 /* AppCoordinator.swift */; };
+		66F9B6392C91B7A300F5B3B1 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B6382C91B7A300F5B3B1 /* BookmarksViewModel.swift */; };
+		66F9B63B2C91B7CA00F5B3B1 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B63A2C91B7CA00F5B3B1 /* BookmarksViewController.swift */; };
+		66F9B63D2C91BA1500F5B3B1 /* BookmarksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9B63C2C91BA1500F5B3B1 /* BookmarksCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +102,10 @@
 		66F9B62A2C908C9C00F5B3B1 /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		66F9B6302C90A77D00F5B3B1 /* BookmarkRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkRepositoryTests.swift; sourceTree = "<group>"; };
 		66F9B6322C90AC0C00F5B3B1 /* BookmarkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkRepository.swift; sourceTree = "<group>"; };
+		66F9B6352C91B18C00F5B3B1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		66F9B6382C91B7A300F5B3B1 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
+		66F9B63A2C91B7CA00F5B3B1 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		66F9B63C2C91BA1500F5B3B1 /* BookmarksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,13 +150,12 @@
 		663F42432C8B0CE400854CB6 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				66F9B6342C91B17B00F5B3B1 /* Application */,
 				663F428D2C8B101700854CB6 /* Infrastructure */,
 				663F42772C8B0D3500854CB6 /* Resources */,
 				663F42762C8B0D2B00854CB6 /* Domain */,
 				663F42752C8B0D2700854CB6 /* Presentation */,
 				663F42742C8B0D1F00854CB6 /* Data */,
-				663F42442C8B0CE400854CB6 /* AppDelegate.swift */,
-				663F42462C8B0CE400854CB6 /* SceneDelegate.swift */,
 				663F424A2C8B0CE400854CB6 /* Main.storyboard */,
 				663F424F2C8B0CE600854CB6 /* LaunchScreen.storyboard */,
 				663F42522C8B0CE600854CB6 /* Info.plist */,
@@ -180,6 +187,7 @@
 		663F42752C8B0D2700854CB6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				66F9B6372C91B79300F5B3B1 /* Bookmarks */,
 				66F9B6212C90850300F5B3B1 /* RecipeDetail */,
 				663F42922C8B162800854CB6 /* Home */,
 			);
@@ -302,6 +310,26 @@
 			path = RecipeDetail;
 			sourceTree = "<group>";
 		};
+		66F9B6342C91B17B00F5B3B1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				663F42442C8B0CE400854CB6 /* AppDelegate.swift */,
+				663F42462C8B0CE400854CB6 /* SceneDelegate.swift */,
+				66F9B6352C91B18C00F5B3B1 /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		66F9B6372C91B79300F5B3B1 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				66F9B6382C91B7A300F5B3B1 /* BookmarksViewModel.swift */,
+				66F9B63A2C91B7CA00F5B3B1 /* BookmarksViewController.swift */,
+				66F9B63C2C91BA1500F5B3B1 /* BookmarksCoordinator.swift */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,8 +447,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F9B63B2C91B7CA00F5B3B1 /* BookmarksViewController.swift in Sources */,
 				663F428F2C8B102100854CB6 /* String+Localized.swift in Sources */,
 				66F9B6332C90AC0C00F5B3B1 /* BookmarkRepository.swift in Sources */,
+				66F9B6362C91B18C00F5B3B1 /* AppCoordinator.swift in Sources */,
 				663F42962C8B165900854CB6 /* HomeViewModel.swift in Sources */,
 				663F42A52C8B212C00854CB6 /* RecipeCell.swift in Sources */,
 				66F9B62B2C908C9C00F5B3B1 /* IngredientCell.swift in Sources */,
@@ -431,7 +461,9 @@
 				663F42452C8B0CE400854CB6 /* AppDelegate.swift in Sources */,
 				663F429A2C8B167B00854CB6 /* Coordinator.swift in Sources */,
 				66F9B6272C90866800F5B3B1 /* RecipeDetailViewModel.swift in Sources */,
+				66F9B63D2C91BA1500F5B3B1 /* BookmarksCoordinator.swift in Sources */,
 				66F9B61C2C90846500F5B3B1 /* RecipeDetailDTO.swift in Sources */,
+				66F9B6392C91B7A300F5B3B1 /* BookmarksViewModel.swift in Sources */,
 				663F429C2C8B171400854CB6 /* DependencyContainer.swift in Sources */,
 				66F9B61E2C90848800F5B3B1 /* RecipeDetail.swift in Sources */,
 				663F42A12C8B1A7000854CB6 /* UIViewController+showError.swift in Sources */,
